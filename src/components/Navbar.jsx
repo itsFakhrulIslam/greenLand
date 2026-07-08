@@ -2,17 +2,17 @@ import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const menuItems = (
-    <>
+    <nav className=" flex gap-4 text-xl text-green-200 font-bold">
       <NavLink to="/">Home</NavLink>
       <NavLink to="about">About</NavLink>
       <NavLink to="gellary">Gellary</NavLink>
       <NavLink to="plantation">Plantation</NavLink>
-    </>
+    </nav>
   );
 
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm">
+    <div className="absolute w-full">
+      <div className="navbar bg-green-700 shadow-sm  sticky top-8">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,12 +41,12 @@ const Navbar = () => {
           </div>
           <a className="btn btn-ghost text-xl">
             <Link to="/">
-              Green <span className="text-green-600">Land</span>
+              Green <span className="text-green-300">Land</span>
             </Link>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 flex gap-4">{menuItems}</ul>
+          <ul className="menu menu-horizontal px-1">{menuItems}</ul>
         </div>
         <div className="navbar-end">
           <a className="btn capitalize bg-amber-400 text-black font-semibold text-lg">
